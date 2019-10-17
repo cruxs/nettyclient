@@ -8,6 +8,16 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        MyThread myThread = new MyThread(Thread.currentThread());
+        
+        
+        myThread.start();
+        System.out.println("loop on");
+
+        while (!Thread.interrupted()) 
+			System.out.println("main has been interrupted");
+			
+
+
     }
 }
